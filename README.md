@@ -11,43 +11,29 @@ This is a Flask-based web application that predicts the price per square meter f
 ## Directory Structure
 
 ```
-Final/
-├── venv/                  # Virtual environment directory
+Predicting-real-estate-prices/
 ├── app.py                 # Main Flask application
 ├── templates/
 │   └── index.html         # HTML template for the web interface
 ├── static/
 │   └── style.css          # CSS file for styling
 ├── requirements.txt       # List of dependencies
+├── SS_Final.xlsx          # Dataset before cleaning
+├── SS_Final_cleaned.xlsx  # Cleaned dataset
+├── xgb.ipynb              # Notebook with XGBoost model
+├── xgboost_model.pkl      # XBGoost model
 └── README.md              # Project documentation
 ```
 
 ## Setup Instructions
 
-
-### 1. Create and Activate a Virtual Environment
-
-On Windows:
-
-```sh
-python -m venv venv
-.\venv\Scripts\activate
-```
-
-On macOS/Linux:
-
-```sh
-python3 -m venv venv
-source venv/bin/activate
-```
-
-### 2. Install Dependencies
+### 1. Install Dependencies
 
 ```sh
 pip install -r requirements.txt
 ```
 
-### 3. Run the Application
+### 2. Run the Application
 
 ```sh
 python app.py
