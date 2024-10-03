@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Predict Price per sqm</h1>
+        <form action="/predict" method="post">
+            <label for="area">Area:</label>
+            <input type="number" id="area" name="area" required>
+            
+            <label for="type">Type:</label>
+            <select id="type" name="type" required>
+                <option value="office">Office</option>
+                <option value="commercial">Commercial</option>
+                <option value="warehouse">Warehouse</option>
+                <option value="shopping">Shopping</option>
+            </select>
+            
+            <label for="district">District:</label>
+            <select id="district" name="district" required>
+                <option value="Chugureti">Chugureti</option>
+                <option value="Didi Dighomi">Didi Dighomi</option>
+                <option value="Didube">Didube</option>
+                <option value="Gldani">Gldani</option>
+                <option value="Isani">Isani</option>
+                <option value="Krtsanisi">Krtsanisi</option>
+                <option value="Mtatsminda">Mtatsminda</option>
+                <option value="Nadzaladevi">Nadzaladevi</option>
+                <option value="Saburtalo">Saburtalo</option>
+                <option value="Samgori">Samgori</option>
+                <option value="Vake">Vake</option>
+                <option value="Vashlijvari">Vashlijvari</option>
+            </select>
+            
+            <label for="status">Status:</label>
+            <select id="status" name="status" required>
+                <option value="new building">New Building</option>
+                <option value="old building">Old Building</option>
+                <option value="under construction">Under Construction</option>
+            </select>
+            
+            <label for="condition">Condition:</label>
+            <select id="condition" name="condition" required>
+                <option value="renovated">Renovated</option>
+                <option value="old renovated">Old Renovated</option>
+                <option value="newly renovated">Newly Renovated</option>
+                <option value="needs renovation">Needs Renovation</option>
+                <option value="under renovation">Under Renovation</option>
+                <option value="white frame">White Frame</option>
+                <option value="black frame">Black Frame</option>
+                <option value="green frame">Green Frame</option>
+            </select>
+            
+            <button type="submit">Predict</button>
+        </form>
+        {% if prediction_text %}
+            <h2>{{ prediction_text }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
