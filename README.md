@@ -1,10 +1,10 @@
 # Price Prediction App
 
-This is a Flask-based web application that predicts the price per square meter for properties based on various features such as area, type, district, status, and condition.
+This is a Flask-based web application that predicts the rental price per square meter for properties based on various features such as area, type, district, status, and condition.
 
 ## Features
 
-- Predicts price per square meter based on user inputs.
+- Predicts rental price per square meter based on user inputs.
 - User-friendly interface with dropdown menus for categorical features.
 - Uses a trained XGBoost model for predictions.
 
