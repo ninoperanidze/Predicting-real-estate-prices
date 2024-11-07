@@ -25,6 +25,12 @@ Predicting-real-estate-prices/
 └── README.md              # Project documentation
 ```
 
+## Example
+
+Here is an example of the Price Prediction App in action:
+
+![Churn Prediction App Example 1](Example.png)
+
 ## Setup Instructions
 
 ### 1. Install Dependencies
